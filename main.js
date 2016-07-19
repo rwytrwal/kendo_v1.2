@@ -29,7 +29,7 @@ $(function () {
         dataTextField: "title",
         dataSource: dataSource,
         filter: "startswith",
-        placeholder: "Select user",
+        placeholder: "Select title",
         separator: ", "
     });
 });
