@@ -4,53 +4,20 @@
     <title></title>
     <link rel="stylesheet" href="lib/kendo.common.min.css" />
     <link rel="stylesheet" href="lib/kendo.default.min.css" />
-    <link rel="stylesheet" href="lib/kendo.default.mobile.min.css" />
+    <!--<link rel="stylesheet" href="lib/kendo.default.mobile.min.css" />-->
 
-    <script src="jquery.min.js"></script>
-    <script src="kendo.all.min.js"></script>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/kendo.all.min.js"></script>
+    <script src="main.js"></script>
 </head>
 <body>
-
-<table id="grid">
-    <thead>
-    <tr>
-        <th>
-
-        </th>
-        <th>
-            Details
-        </th>
-        <th>
-            Comments
-        </th>
-    </thead>
-    <tbody>
-    <td colspan="3"></td>
-    </tbody>
-</table>
-
-<script>
-
-    $(function() {
-        $("#grid").kendoGrid({
-            columns: [{ field: 'images.thumbnail.url' }, { field: 'user.username' }, { field: 'comments' }],
-            dataSource: {
-                transport: {
-                    read: {
-                        url: "https://api.instagram.com/v1/media/popular?client_id=4e0171f9fcfc4015bb6300ed91fbf719&count=25",
-                        dataType: "jsonp"
-                    }
-                },
-                schema: {
-                    data: "data"
-                }
-            },
-            height: 500,
-            scrollable: true,
-            selectable: true
-        });
-    });
-
-</script>
+<div>
+    <div class="demo-section k-content">
+        <h4>Chose user:</h4>
+        <input id="countries" style="width: 100%;" />
+        <div class="demo-hint">Scores:</div>
+    </div>
+    <div id="grid"></div>
+</div>
 </body>
 </html>
