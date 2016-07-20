@@ -63,9 +63,7 @@ $(function getdata() {
         $("#grid").data("kendoGrid").setDataSource(dataSourcePost);
     });
     function grid(a) {
-
         var $grid = $("#grid").kendoGrid({
-
             dataSource: {
                 transport: {
                     read: config.url2
@@ -87,7 +85,6 @@ $(function getdata() {
             console.log($grid);
         });
     }
-
     function detailInit(e) {
         $("#grid2").kendoGrid({
             dataSource: {
